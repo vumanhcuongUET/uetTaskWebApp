@@ -158,8 +158,7 @@ export const updateCardSequence = createAsyncThunk(
       },
       redirect: 'follow',
       referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data),
-
+      body: JSON.stringify(data)
     });
 
     const inJSON = await response.json();

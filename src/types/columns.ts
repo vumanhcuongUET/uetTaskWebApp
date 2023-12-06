@@ -9,7 +9,7 @@ export type ColumnsSlice = {
   doneFetching: boolean;
 };
 export const config = {
-  responseLimit: '100mb',
+  responseLimit: false,
   bodyParser: {
     sizeLimit: '100mb'
   }

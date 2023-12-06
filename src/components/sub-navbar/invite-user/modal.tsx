@@ -27,7 +27,8 @@ const InviteModal = () => {
 
   const handleClick = async () => {
     setMailSending(true);
-    await sendEmail();
+    // await sendEmail();
+    await inviteUser();
     setMailSending(false);
   };
 
@@ -42,7 +43,35 @@ const InviteModal = () => {
       setEmailErr(false);
     }
   };
+  const inviteUser = async () => {
+    const host = checkEnvironment();
+    const URL = `${host}/api/invite-user`;
+    const data = {
+      email,
+      boardId: board._id
+    };
 
+    const response = await fetch(URL, {
+      method: 'PATCH',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(data)
+    });
+
+    const json = await response.json();
+
+    if (json.message === 'Invited') {
+      return true;
+    } else {
+      return false;
+    }
+  };
   const sendEmail = async () => {
     const url = `${host}/api/mail`;
 

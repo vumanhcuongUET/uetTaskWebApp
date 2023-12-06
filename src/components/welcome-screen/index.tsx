@@ -20,7 +20,8 @@ const WelcomeScreen = (): JSX.Element => {
               fontSize={['1rem', '1rem', '1.5rem', '1.5rem']}
               width={['100%', '100%', '50%', '50%']}>
               Collaborate, manage projects, and reach new productivity peaks. From high rises to the
-              home office, the way your team works is unique - accomplish it all with UET Task Web App.
+              home office, the way your team works is unique - accomplish it all with UET Task Web
+              App.
             </Text>
           </Box>
           <Box>

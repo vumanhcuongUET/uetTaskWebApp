@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Button, Image, Flex, Box, Spacer,Text } from '@chakra-ui/react';
+import { Button, Image, Flex, Box, Spacer, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { useAppSelector } from '@/src/hooks';
@@ -66,8 +66,20 @@ const NavBar: FC<IProps> = ({ bg }) => {
   return (
     <Box bg={bg} boxShadow="md">
       <Flex>
-        <Image height="10" margin={['15px','15px','15px','15px']} marginRight={['5px','5px','5px','5px']} src="/logo_homepage.png " alt="brand logo" m="5"></Image>
-        <Text marginLeft="5px" fontSize={['20px', '20px', '20px', '20px']} fontWeight="bold" lineHeight="72px">UET Task Web App</Text>
+        <Image
+          height="10"
+          margin={['15px', '15px', '15px', '15px']}
+          marginRight={['5px', '5px', '5px', '5px']}
+          src="/logo_homepage.png "
+          alt="brand logo"
+          m="5"></Image>
+        <Text
+          marginLeft="5px"
+          fontSize={['20px', '20px', '20px', '20px']}
+          fontWeight="bold"
+          lineHeight="72px">
+          UET Task Web App
+        </Text>
         <Spacer />
         {renderButtons()}
       </Flex>

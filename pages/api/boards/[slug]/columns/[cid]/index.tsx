@@ -1,6 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connectToDatabase } from '@/util/mongodb';
-
+export const config = {
+  api: {
+    responseLimit: false,
+    bodyParser: {
+      sizeLimit: '100mb'
+    }
+  }
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   const { cid } = req.query;
 
