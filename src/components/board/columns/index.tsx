@@ -25,7 +25,6 @@ const BoardColumns: FC = (): JSX.Element => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [cardDetail, setCardDetail] = useState<CardDetail>({ _id: '', title: '', description: '' });
-
   const showCardDetail = (cardId: string) => {
     const card = cards.filter((card) => card._id === cardId);
 

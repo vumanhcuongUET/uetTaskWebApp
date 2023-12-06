@@ -21,5 +21,4 @@ const Cards: FC<Props> = ({ cards, showCardDetail }) => {
 Cards.propTypes = {
   showCardDetail: PropTypes.func
 };
-
 export default Cards;

@@ -5,14 +5,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { cardId, cid } = req.query;
 
   const { db, client } = await connectToDatabase();
-
   if (client.isConnected()) {
     const requestType = req.method;
-
     switch (requestType) {
       case 'PATCH': {
         const { boardName, columnName, columnId } = req.body;
-
         const data = {
           boardName,
           columnName,
