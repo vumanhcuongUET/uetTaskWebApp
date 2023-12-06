@@ -88,7 +88,7 @@ export const boardSlice = createSlice({
 
 export const { resetBoards } = boardSlice.actions;
 export const config = {
-  responseLimit: '100mb',
+  responseLimit: false,
   bodyParser: {
     sizeLimit: '100mb'
   }

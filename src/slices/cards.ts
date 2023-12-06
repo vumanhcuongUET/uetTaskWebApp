@@ -243,7 +243,7 @@ export const cardsSlice = createSlice({
 
 export const { resetCards, updateCardSequenceToLocalState } = cardsSlice.actions;
 export const config = {
-  responseLimit: '100mb',
+  responseLimit: false,
   bodyParser: {
     sizeLimit: '100mb'
   }
